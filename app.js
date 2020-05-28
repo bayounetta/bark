@@ -15,6 +15,8 @@ app.use(bodyParser.json());
 app.get("/", (request, response) => {
   console.log(request.headers)
   console.log(request.body);
+  // uncomment to stop silently listening
+  // response.send('bark!');
 });
 
 app.listen(port, () => console.log(`Now barking from port: ${port}`));
